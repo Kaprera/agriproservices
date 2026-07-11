@@ -3,9 +3,65 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Agri Pro Services — From Roots to Roofs</title>
-<meta name="description" content="Agri Pro Services — integrated gardening, pest control and disinfection solutions in Lebanon. Reliable. Safe. Proven." />
+<title>Agri Pro Services | Pest Control, Gardening &amp; Disinfection in Lebanon</title>
+<meta name="description" content="Pest control, gardening &amp; disinfection across Lebanon — serving Saidoun, Jezzine &amp; South Lebanon. Safe, family-friendly, proven. Free assessment." />
+
+<!-- Canonical: keep the netlify.app URL until the agriproservices.org migration, then switch this (and the OG url + JSON-LD url + sitemap) to the .org domain -->
+<link rel="canonical" href="https://agriproservices.netlify.app/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Agri Pro Services" />
+<meta property="og:title" content="Agri Pro Services | Pest Control, Gardening &amp; Disinfection in Lebanon" />
+<meta property="og:description" content="Integrated pest control, gardening &amp; disinfection across Lebanon — serving Saidoun, Jezzine District &amp; the South. Safe, family-friendly, proven." />
+<meta property="og:url" content="https://agriproservices.netlify.app/" />
+<!-- TODO: replace with a purpose-made 1200×630 og-image.jpg; using the brand mark as a placeholder for now -->
+<meta property="og:image" content="https://agriproservices.netlify.app/assets/img/logo-mark.png" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ar_LB" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Agri Pro Services | Pest Control, Gardening &amp; Disinfection in Lebanon" />
+<meta name="twitter:description" content="Integrated pest control, gardening &amp; disinfection across Lebanon — serving Saidoun, Jezzine District &amp; the South." />
+<meta name="twitter:image" content="https://agriproservices.netlify.app/assets/img/logo-mark.png" />
+
 <link rel="icon" type="image/svg+xml" href="assets/img/logo-mark.svg" />
+
+<!-- LocalBusiness structured data. Address is city-level (Saida) — confirm a full street address with the client to strengthen it. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Agri Pro Services",
+  "description": "Integrated gardening, pest control and disinfection services in Lebanon.",
+  "telephone": "+961-71-180-289",
+  "url": "https://agriproservices.netlify.app/",
+  "image": "https://agriproservices.netlify.app/assets/img/logo-mark.png",
+  "slogan": "From Roots to Roofs",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Saida",
+    "addressRegion": "South Governorate",
+    "addressCountry": "LB"
+  },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Saidoun" },
+    { "@type": "AdministrativeArea", "name": "Jezzine District" },
+    { "@type": "AdministrativeArea", "name": "Saida" },
+    { "@type": "AdministrativeArea", "name": "South Governorate, Lebanon" },
+    { "@type": "Country", "name": "Lebanon" }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/agri.pro.services"
+  ],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pest Control" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gardening" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Disinfection" } }
+  ]
+}
+</script>
 
 <!-- Above-the-fold fonts -->
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/Helvetica.woff2" crossorigin />
@@ -146,7 +202,8 @@ section{position:relative;scroll-margin-top:90px}
   mask-image:linear-gradient(100deg,transparent 30%,#000 75%);
 }
 .hero .container{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,56px);align-items:center;width:100%;position:relative}
-.hero h1{font-size:clamp(2.8rem,6.5vw,5.4rem);margin:22px 0 20px;color:var(--ink)}
+.hero h1{font-size:clamp(2.8rem,6.5vw,5.4rem);margin:22px 0 14px;color:var(--ink)}
+.hero__kicker{font-size:clamp(1rem,1.7vw,1.22rem);font-weight:700;letter-spacing:-.01em;color:var(--green);margin:0 0 18px;max-width:22em}
 .hero__sub{
   font-family:var(--serif);font-size:clamp(1.1rem,2vw,1.35rem);
   color:var(--muted);max-width:30em;margin-bottom:36px;line-height:1.6;
@@ -456,6 +513,7 @@ a.c-row:hover{background:rgba(255,255,255,.09)}
     <div class="hero__copy">
       <span class="eyebrow reveal" data-i18n="hero.eyebrow">Gardening · Pest Control · Disinfection</span>
       <h1 class="reveal d1" data-i18n-html="hero.title">From Roots<br>to <span class="accent">Roofs.</span></h1>
+      <h2 class="hero__kicker reveal d2" data-i18n="hero.kicker">Pest Control, Gardening &amp; Disinfection across Lebanon</h2>
       <p class="hero__sub reveal d2" data-i18n="hero.sub">Lebanon's integrated partner for gardening, pest control and disinfection — caring for every layer of your space, from the ground beneath to the roof above.</p>
       <div class="hero__cta reveal d3">
         <a href="#contact" class="btn btn--primary btn--arrow"><span data-i18n="hero.cta1">Request a Visit</span>
@@ -604,6 +662,36 @@ a.c-row:hover{background:rgba(255,255,255,.09)}
   </div>
 </section>
 
+<!-- ===== PEST CONTROL / SERVICE AREA ===== -->
+<section class="section" id="pest-control">
+  <div class="container">
+    <div class="split">
+      <div class="reveal">
+        <span class="eyebrow" data-i18n="pc.eyebrow">Pest Control in South Lebanon</span>
+        <h2 data-i18n-html="pc.title">The best pest control<br><span class="accent">in Saidoun &amp; beyond.</span></h2>
+      </div>
+      <p class="split__copy reveal d1" data-i18n="pc.lead">Homes and businesses across Saidoun, Jezzine and the South trust Agri Pro Services for pest control that actually lasts — thorough, safe and built around your property.</p>
+    </div>
+    <div class="about__grid">
+      <div class="about__body reveal d1">
+        <p class="body" data-i18n="pc.body">We treat the full range of household and commercial pests — cockroaches, ants, rodents (rats and mice), bed bugs, fleas, mosquitoes, wasps and stored-product insects. Every job starts with a full inspection to find the source and entry points, followed by a targeted treatment and a prevention plan that keeps the problem from coming back.</p>
+        <p class="body" data-i18n="pc.body2" style="margin-top:1.1em">Our products and methods are chosen to be safe for families, children and pets, and are applied by trained technicians who follow correct dosing and safety practice. For ongoing peace of mind we offer scheduled maintenance visits and rapid, same-region call-outs.</p>
+        <div class="svc__chips" style="margin-top:26px">
+          <span class="chip" data-i18n="pc.c1">Cockroaches &amp; ants</span>
+          <span class="chip" data-i18n="pc.c2">Rodents (rats &amp; mice)</span>
+          <span class="chip" data-i18n="pc.c3">Bed bugs &amp; fleas</span>
+          <span class="chip" data-i18n="pc.c4">Mosquitoes &amp; wasps</span>
+          <span class="chip" data-i18n="pc.c5">Inspection &amp; prevention</span>
+        </div>
+      </div>
+      <div class="vision-card reveal d2">
+        <span class="eyebrow" data-i18n="pc.areaT">Where we work</span>
+        <p data-i18n="pc.area">Proudly serving Saidoun, the Jezzine District and Saida, plus communities across the South Governorate — with nationwide coverage throughout Lebanon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== PARTNERS ===== -->
 <section class="section partners" id="partners">
   <div class="container">
@@ -724,7 +812,7 @@ a.c-row:hover{background:rgba(255,255,255,.09)}
         <h5 data-i18n="foot.servicesT">Services</h5>
         <ul>
           <li><a href="#services" data-i18n="svc1.t">Gardening</a></li>
-          <li><a href="#services" data-i18n="svc2.t">Pest Control</a></li>
+          <li><a href="#pest-control" data-i18n="svc2.t">Pest Control</a></li>
           <li><a href="#services" data-i18n="svc3.t">Disinfection</a></li>
         </ul>
       </div>
@@ -752,11 +840,12 @@ a.c-row:hover{background:rgba(255,255,255,.09)}
 /* ============ TRANSLATIONS ============ */
 const I18N = {
 en: {
-  "meta.title":"Agri Pro Services — From Roots to Roofs",
+  "meta.title":"Agri Pro Services | Pest Control, Gardening & Disinfection in Lebanon",
   "nav.about":"About","nav.services":"Services","nav.partners":"Partners","nav.contact":"Contact",
   "nav.cta":"Get a Quote","nav.lang":"العربية",
   "hero.eyebrow":"Gardening · Pest Control · Disinfection",
   "hero.title":"From Roots<br>to <span class=\"accent\">Roofs.</span>",
+  "hero.kicker":"Pest Control, Gardening & Disinfection across Lebanon",
   "hero.sub":"Lebanon's integrated partner for gardening, pest control and disinfection — caring for every layer of your space, from the ground beneath to the roof above.",
   "hero.cta1":"Request a Visit","hero.cta2":"Explore Services",
   "hero.roofs":"Roofs","hero.roots":"Roots",
@@ -784,6 +873,14 @@ en: {
   "svc3.i1":"Surface sanitizing","svc3.i2":"Odour & germ treatment","svc3.i3":"Homes & businesses",
   "svc.cta":"Get this service",
   "band.quote":"One goal — a cleaner, <span class=\"accent\">safer</span>, greener environment.",
+  "pc.eyebrow":"Pest Control in South Lebanon",
+  "pc.title":"The best pest control<br><span class=\"accent\">in Saidoun & beyond.</span>",
+  "pc.lead":"Homes and businesses across Saidoun, Jezzine and the South trust Agri Pro Services for pest control that actually lasts — thorough, safe and built around your property.",
+  "pc.body":"We treat the full range of household and commercial pests — cockroaches, ants, rodents (rats and mice), bed bugs, fleas, mosquitoes, wasps and stored-product insects. Every job starts with a full inspection to find the source and entry points, followed by a targeted treatment and a prevention plan that keeps the problem from coming back.",
+  "pc.body2":"Our products and methods are chosen to be safe for families, children and pets, and are applied by trained technicians who follow correct dosing and safety practice. For ongoing peace of mind we offer scheduled maintenance visits and rapid, same-region call-outs.",
+  "pc.c1":"Cockroaches & ants","pc.c2":"Rodents (rats & mice)","pc.c3":"Bed bugs & fleas","pc.c4":"Mosquitoes & wasps","pc.c5":"Inspection & prevention",
+  "pc.areaT":"Where we work",
+  "pc.area":"Proudly serving Saidoun, the Jezzine District and Saida, plus communities across the South Governorate — with nationwide coverage throughout Lebanon.",
   "partners.eyebrow":"Our Success Partners",
   "partners.title":"Trusted by <span class=\"accent\">leading</span> organizations.",
   "partners.desc":"We're proud to work alongside a growing network of residential, commercial and institutional clients across Lebanon. Every partnership reflects the same promise — reliable, safe, proven care for every layer of your space.",
@@ -792,22 +889,23 @@ en: {
   "contact.title":"Let's care for <span class=\"accent\">your space.</span>",
   "contact.desc":"Reliable. Safe. Proven. Reach out for a free assessment — we'll build the right plan for your home or business.",
   "act.callK":"Call us","act.waK":"WhatsApp","act.waV":"Message us instantly",
-  "act.igK":"Follow us","act.locK":"Based in","act.locV":"Lebanon · Nationwide service",
+  "act.igK":"Follow us","act.locK":"Based in","act.locV":"Saida, Lebanon · Nationwide service",
   "form.title":"Request a free quote","form.intro":"Fill in a few details and we'll get back to you shortly.",
   "form.name":"Full name","form.namePh":"Your name","form.phone":"Phone","form.phonePh":"+961 …",
   "form.service":"Service needed","form.o1":"Gardening","form.o2":"Pest Control","form.o3":"Disinfection","form.o4":"All three (integrated)",
   "form.msg":"Message","form.msgPh":"Tell us about your space…","form.send":"Send Request",
   "form.note":"Or call us directly at",
   "foot.blurb":"Integrated gardening, pest control and disinfection solutions — caring for every layer of your space, from roots to roofs.",
-  "foot.exploreT":"Explore","foot.servicesT":"Services","foot.contactT":"Contact","foot.loc":"Lebanon",
+  "foot.exploreT":"Explore","foot.servicesT":"Services","foot.contactT":"Contact","foot.loc":"Saida, Lebanon",
   "foot.tag":"From Roots to Roofs"
 },
 ar: {
-  "meta.title":"أجري برو سيرفيسز — من الجذور إلى السطوح",
+  "meta.title":"أجري برو سيرفيسز | مكافحة الآفات والبستنة والتعقيم في لبنان",
   "nav.about":"من نحن","nav.services":"خدماتنا","nav.partners":"شركاؤنا","nav.contact":"تواصل معنا",
   "nav.cta":"اطلب عرض سعر","nav.lang":"English",
   "hero.eyebrow":"بستنة · مكافحة آفات · تعقيم",
   "hero.title":"من الجذور<br><span class=\"accent\">إلى السطوح.</span>",
+  "hero.kicker":"مكافحة الآفات والبستنة والتعقيم في جميع أنحاء لبنان",
   "hero.sub":"شريككم المتكامل في لبنان للبستنة ومكافحة الآفات والتعقيم — نعتني بكل طبقة من مساحتكم، من الأرض تحتكم إلى السقف فوقكم.",
   "hero.cta1":"اطلبوا زيارة","hero.cta2":"استكشفوا خدماتنا",
   "hero.roofs":"السطوح","hero.roots":"الجذور",
@@ -835,6 +933,14 @@ ar: {
   "svc3.i1":"تعقيم الأسطح","svc3.i2":"معالجة الروائح والجراثيم","svc3.i3":"للمنازل والمؤسسات",
   "svc.cta":"اطلبوا هذه الخدمة",
   "band.quote":"هدف واحد — بيئة أنظف، <span class=\"accent\">أكثر أماناً</span>، وأكثر خضرة.",
+  "pc.eyebrow":"مكافحة الآفات في جنوب لبنان",
+  "pc.title":"أفضل مكافحة للآفات<br><span class=\"accent\">في صيدون وما حولها.</span>",
+  "pc.lead":"تثق المنازل والمؤسسات في صيدون وجزّين والجنوب بأجري برو سيرفيسز لمكافحة آفات تدوم فعلاً — دقيقة وآمنة ومصمّمة على قياس عقاركم.",
+  "pc.body":"نعالج كل أنواع الآفات المنزلية والتجارية — الصراصير والنمل والقوارض (الجرذان والفئران) وبقّ الفراش والبراغيث والبعوض والدبابير وحشرات المخزون. يبدأ كل عمل بفحص شامل لتحديد المصدر ونقاط الدخول، يليه علاج مركّز وخطة وقاية تمنع عودة المشكلة.",
+  "pc.body2":"نختار موادنا وأساليبنا لتكون آمنة للعائلات والأطفال والحيوانات الأليفة، ويطبّقها فنيّون مدرّبون يلتزمون بالجرعات الصحيحة وقواعد السلامة. ولمزيد من راحة البال، نوفّر زيارات صيانة مجدولة واستجابة سريعة ضمن المنطقة.",
+  "pc.c1":"الصراصير والنمل","pc.c2":"القوارض (جرذان وفئران)","pc.c3":"بقّ الفراش والبراغيث","pc.c4":"البعوض والدبابير","pc.c5":"الفحص والوقاية",
+  "pc.areaT":"أين نعمل",
+  "pc.area":"نفخر بخدمة صيدون وقضاء جزّين وصيدا، إضافة إلى مجتمعات في كل أنحاء محافظة الجنوب — مع تغطية تشمل جميع أنحاء لبنان.",
   "partners.eyebrow":"شركاء النجاح",
   "partners.title":"موثوقون من <span class=\"accent\">مؤسسات</span> رائدة.",
   "partners.desc":"نفخر بالعمل مع شبكة متنامية من العملاء السكنيين والتجاريين والمؤسساتيين في جميع أنحاء لبنان. كل شراكة تعكس الوعد نفسه — عناية موثوقة وآمنة ومجرّبة بكل طبقة من مساحتكم.",
@@ -843,14 +949,14 @@ ar: {
   "contact.title":"لنعتنِ <span class=\"accent\">بمساحتكم.</span>",
   "contact.desc":"موثوق. آمن. مجرّب. تواصلوا معنا لتقييم مجاني — نضع الخطة المناسبة لمنزلكم أو مؤسستكم.",
   "act.callK":"اتصلوا بنا","act.waK":"واتساب","act.waV":"راسلونا فوراً",
-  "act.igK":"تابعونا","act.locK":"مقرّنا","act.locV":"لبنان · خدمة في كل المناطق",
+  "act.igK":"تابعونا","act.locK":"مقرّنا","act.locV":"صيدا، لبنان · خدمة في كل المناطق",
   "form.title":"اطلبوا عرض سعر مجانياً","form.intro":"أدخلوا بعض التفاصيل ونعاود الاتصال بكم قريباً.",
   "form.name":"الاسم الكامل","form.namePh":"اسمكم","form.phone":"الهاتف","form.phonePh":"+961 …",
   "form.service":"الخدمة المطلوبة","form.o1":"البستنة","form.o2":"مكافحة الآفات","form.o3":"التعقيم","form.o4":"الخدمات الثلاث معاً",
   "form.msg":"الرسالة","form.msgPh":"حدّثونا عن مساحتكم…","form.send":"أرسلوا الطلب",
   "form.note":"أو اتصلوا مباشرة على",
   "foot.blurb":"حلول متكاملة في البستنة ومكافحة الآفات والتعقيم — نعتني بكل طبقة من مساحتكم، من الجذور إلى السطوح.",
-  "foot.exploreT":"استكشف","foot.servicesT":"خدماتنا","foot.contactT":"تواصل","foot.loc":"لبنان",
+  "foot.exploreT":"استكشف","foot.servicesT":"خدماتنا","foot.contactT":"تواصل","foot.loc":"صيدا، لبنان",
   "foot.tag":"من الجذور إلى السطوح"
 }
 };

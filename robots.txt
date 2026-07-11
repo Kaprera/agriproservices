@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Update to https://agriproservices.org/sitemap.xml after the domain migration
+Sitemap: https://agriproservices.netlify.app/sitemap.xml

@@ -120,6 +120,7 @@ img,svg{display:block;max-width:100%}
 ul{list-style:none}
 section{position:relative;scroll-margin-top:90px}
 .container{max-width:var(--maxw);margin:0 auto;padding-inline:clamp(20px,5vw,48px)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .section{padding-block:clamp(76px,10vw,128px)}
 .serif{font-family:var(--serif)}
 .eyebrow{
@@ -545,8 +546,9 @@ a.c-row:hover{background:rgba(255,255,255,.09)}
 </header>
 
 <!-- ===== STATS ===== -->
-<section class="stats">
+<section class="stats" aria-labelledby="stats-heading">
   <div class="container">
+    <h2 id="stats-heading" class="sr-only" data-i18n="stats.heading">By the numbers</h2>
     <div class="stats__grid">
       <div class="stat-card reveal"><div class="stat-card__num" data-i18n-html="stats.n1">3<span>-in-</span>1</div><div class="stat-card__label" data-i18n="stats.l1">Integrated care</div></div>
       <div class="stat-card reveal d1"><div class="stat-card__num" data-i18n-html="stats.n2">100<span>%</span></div><div class="stat-card__label" data-i18n="stats.l2">Safe methods</div></div>
@@ -655,7 +657,8 @@ a.c-row:hover{background:rgba(255,255,255,.09)}
           <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
         </a>
       </article>
-      <article class="svc svc--goal reveal d4">
+      <article class="svc svc--goal reveal d4" aria-labelledby="goal-heading">
+        <h2 id="goal-heading" class="sr-only" data-i18n="band.heading">Our commitment</h2>
         <p data-i18n-html="band.quote">One goal — a cleaner, <span class="accent">safer</span>, greener environment.</p>
         <a href="#contact" class="btn btn--light btn--arrow"><span data-i18n="hero.cta1">Request a Visit</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -853,6 +856,7 @@ en: {
   "hero.sub":"Lebanon's integrated partner for gardening, pest control and disinfection — caring for every layer of your space, from the ground beneath to the roof above.",
   "hero.cta1":"Request a Visit","hero.cta2":"Explore Services",
   "hero.roofs":"Roofs","hero.roots":"Roots",
+  "stats.heading":"By the numbers",
   "stats.n1":"3<span>-in-</span>1","stats.l1":"Integrated care",
   "stats.n2":"100<span>%</span>","stats.l2":"Safe methods",
   "stats.n3":"24<span>/</span>7","stats.l3":"Rapid response",
@@ -876,6 +880,7 @@ en: {
   "svc3.t":"Disinfection","svc3.d":"Professional sanitizing treatments for a hygienic, healthy environment across every surface.",
   "svc3.i1":"Surface sanitizing","svc3.i2":"Odour & germ treatment","svc3.i3":"Homes & businesses",
   "svc.cta":"Get this service",
+  "band.heading":"Our commitment",
   "band.quote":"One goal — a cleaner, <span class=\"accent\">safer</span>, greener environment.",
   "pc.eyebrow":"Pest Control in South Lebanon",
   "pc.title":"The best pest control<br><span class=\"accent\">in Saidoun & beyond.</span>",
@@ -913,6 +918,7 @@ ar: {
   "hero.sub":"شريككم المتكامل في لبنان للبستنة ومكافحة الآفات والتعقيم — نعتني بكل طبقة من مساحتكم، من الأرض تحتكم إلى السقف فوقكم.",
   "hero.cta1":"اطلبوا زيارة","hero.cta2":"استكشفوا خدماتنا",
   "hero.roofs":"السطوح","hero.roots":"الجذور",
+  "stats.heading":"بالأرقام",
   "stats.n1":"3 <span>في</span> 1","stats.l1":"عناية متكاملة",
   "stats.n2":"100<span>%</span>","stats.l2":"أساليب آمنة",
   "stats.n3":"24<span>/</span>7","stats.l3":"استجابة سريعة",
@@ -936,6 +942,7 @@ ar: {
   "svc3.t":"التعقيم","svc3.d":"معالجات تعقيم احترافية لبيئة صحية ونظيفة على كل الأسطح.",
   "svc3.i1":"تعقيم الأسطح","svc3.i2":"معالجة الروائح والجراثيم","svc3.i3":"للمنازل والمؤسسات",
   "svc.cta":"اطلبوا هذه الخدمة",
+  "band.heading":"التزامنا",
   "band.quote":"هدف واحد — بيئة أنظف، <span class=\"accent\">أكثر أماناً</span>، وأكثر خضرة.",
   "pc.eyebrow":"مكافحة الآفات في جنوب لبنان",
   "pc.title":"أفضل مكافحة للآفات<br><span class=\"accent\">في صيدون وما حولها.</span>",
